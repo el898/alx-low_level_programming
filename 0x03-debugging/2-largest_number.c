@@ -1,31 +1,29 @@
 #include "main.h"
 
-
-
 /**
+ * largest_number - returns the largest of 3 numbers
+ * @a: first integer
+ * @b: second integer
+ * @c: third integer
+ * Return: largest number
+ */
 
-* main - tests function that prints if integer is positive or negative
-
-* Return: 0
-
-*/
-
-
-
-int main(void)
-
+int largest_number(int a, int b, int c)
 {
+	int largest;
 
-        int i;
+	if (a > b && a > c)
+	{
+		largest = a;
+	}
+	else if (b > a && b > c)
+	{
+		largest = b;
+	}
+	else
+	{
+		largest = c;
+	}
 
-
-
-        i = 98;
-
-        positive_or_negative(i);
-
-
-
-        return (0);
-
+	return (largest);
 }
