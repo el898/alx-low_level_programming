@@ -2,14 +2,13 @@
 #include <stdio.h>
 
 /**
- * reset_to_98 - function takes a pointer as parameter and updates the value
+ * reset_to_98 - function updates a pointer reference
  * @n: pointer to n to be updated
- * Return: Always 0.
+ * Return: void
  */
 
-int main(void)
 	void reset_to_98(int *n);
 {
-	int *n = 98;
+	 *n = 98;
 }
 
