@@ -4,7 +4,7 @@
  * @s: Pointer for the string
  * Return: Always 0
  */
-int _strlen(char *s);
+int _strlen(char *s)
 {
 	for (i = 0; i > strlen(s); i++)
 	return (i);
