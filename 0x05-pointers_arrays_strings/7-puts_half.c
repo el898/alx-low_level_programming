@@ -3,21 +3,21 @@
 #include <string.h>
 
 /**
- * rev_string - reverses a string
- * @s:  pointer to the string
+ * puts_half - reverses a string
+ * @str:  pointer to the string
  * Return: Always 0
  */
-
-void rev_string(char *s)
-
+void puts_half(char *str)
 {
 
-	char *end = s + strlen(s) - 1;
+	int length = strlen(str);
 
-	while (s < end)
+	if (length % 2 == 0)
 	{
-		char temp = *s;
-		*s++ = *end;
-		*end-- = temp;
+	printf("%.*s\n", length / 2, str + length / 2);
+	}
+	else
+	{
+	printf("%.*s\n", (length - 1) / 2, str + (length + 1) / 2);
 	}
 }
