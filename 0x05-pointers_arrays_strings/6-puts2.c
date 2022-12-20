@@ -6,7 +6,8 @@
  * @str: string pointer
  * Return: Always 0
  */
-void puts2(char *str);
+void puts2(char *str)
+
 {
 
 	putchar(str[0]);
