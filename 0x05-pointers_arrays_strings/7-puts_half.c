@@ -20,4 +20,4 @@ void rev_string(char *s)
 		*s++ = *end;
 		*end-- = temp;
 	}
-
+}
