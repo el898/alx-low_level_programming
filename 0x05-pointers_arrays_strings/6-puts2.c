@@ -7,16 +7,26 @@
  * Return: Always 0
  */
 void puts2(char *str)
-
 {
 
-	putchar(str[0]);
-	putchar('\n');
+	int i = 0;
 
-	for (int i = 2; str[i] != '\0'; i += 2)
+	while (str[i] != '\0')
+
 	{
-	putchar(str[i]);
 
-	putchar('\n');
+		if (i % 2 == 0)
+
+		{
+
+			_putchar(str[i]);
+
+		}
+
+		i++;
+
 	}
+
+	_putchar('\n');
+
 }
