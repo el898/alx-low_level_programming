@@ -1,19 +1,10 @@
 #include <stdio.h>
-
 #include <stdlib.h>
-
 /**
-
  * main - main block to be executed
-
- * Description: write a program that prints all the combinations of two digits
-
- * numbers to be seperated with ,, followed by a space
-
+ * Description:prints all the combinations of two digits
  * Return: 0 Success
-
  */
-
 int main(void)
 
 {
@@ -39,35 +30,19 @@ int main(void)
 			if (d != c && d < c)
 
 			{
-
 				putchar('0' + d);
-
 				putchar('0' + c);
-
 				if (c + d != 17)
-
 				{
-
 					putchar(',');
-
 					putchar(' ');
-
 				}
-
 			}
-
 			c++;
-
 		}
 
 		d++;
-
 	}
-
 	putchar('\n');
-
-
-
 	return (0);
-
 }

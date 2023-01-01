@@ -1,15 +1,9 @@
 #include <stdio.h>
-
 #include <stdlib.h>
-
 /**
-
  * main - block to be executed
-
  * Description: print out all single digits
-
  * Return: 0 Success
-
  */
 
 int main(void)
