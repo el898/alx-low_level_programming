@@ -1,14 +1,17 @@
 #!/usr/bin/python3
-# 1-element_at.py
 
 def element_at(my_list, idx):
-    if idx < 0:
-        return None
-    elif idx >= len(my_list):
+    """
+    gets an elment from a list at index idx
+    Args:
+        my_list - list to search
+        idx - the position to access
+    Return:
+        None - if idx is out of range
+        Data - element at idx
+    """
+
+    if idx < 0 or idx >= len(my_list):
         return None
     else:
-        i = 0
-        while i < len(my_list):
-            if i == idx:
-                return my_list[i]
-            i += 1
+        return my_list[idx]

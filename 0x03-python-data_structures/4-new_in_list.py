@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-
-def replace_in_list(my_list, idx, element):
+def new_in_list(my_list, idx, element):
     """
     replace an elment from a list at index idx with elem
     Args:
@@ -8,10 +7,11 @@ def replace_in_list(my_list, idx, element):
         idx - the position to access
         element - new elem to swap with
     Return:
-        my_list
+        modified my_list
     """
 
-    if idx < 0 or idx >= len(my_list):
-        return my_list
-    my_list[idx] = element
-    return my_list
+    copy_list = my_list[:]
+    if idx < 0 or idx >= len(copy_list):
+        return copy_list
+    copy_list[idx] = element
+    return copy_list

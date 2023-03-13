@@ -1,12 +1,14 @@
 #!/usr/bin/python3
-# 4-new_in_list.py
 
+def print_reversed_list_integer(my_list=[]):
+    """
+    Prints integers in a list in reverse
+    Args:
+        my_list - list of integers default[]
+    """
 
-def new_in_list(my_list, idx, element):
-    """Replace element in a cpy list at specified pos."""
-    if idx < 0 or idx > (len(my_list) - 1):
-        return (my_list)
+    if my_list is None:
+        return None
 
-    cpy = [i for i in my_list]
-    cpy[idx] = element
-    return (cpy)
+    for i in range(len(my_list) - 1, -1, -1):
+        print("{:d}".format(my_list[i]))
