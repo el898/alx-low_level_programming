@@ -1,6 +1,14 @@
-#!/bin/bash
+#!/usr/bin/python3
+# 1-element_at.py
+
 def element_at(my_list, idx):
-    """get ele from lst."""
-    if idx < 0 or idx > (len(my_list) - 1):
+    if idx < 0:
         return None
-    return (my_list[idx])
+    elif idx >= len(my_list):
+        return None
+    else:
+        i = 0
+        while i < len(my_list):
+            if i == idx:
+                return my_list[i]
+            i += 1
