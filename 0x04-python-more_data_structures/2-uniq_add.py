@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-def search_replace(my_list, search, replace):
-    new_list = []
+def uniq_add(my_list=[]):
+    unique_list = []
+    sum = 0
     for elem in my_list:
-        if elem == search:
-            new_list.append(replace)
-        else:
-            new_list.append(elem)
-    return new_list
+        if elem not in unique_list:
+            unique_list.append(elem)
+            sum += elem
+    return sum
