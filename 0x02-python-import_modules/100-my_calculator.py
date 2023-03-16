@@ -1,59 +1,28 @@
-#include <Python.h>
-#include <stdio.h>
+#!/usr/bin/python3
+from calculator_1 import add, sub, mul, div
 
-void print_python_bytes(PyObject *p)
-{
-    PyBytesObject *bytes = (PyBytesObject *)p;
-    Py_ssize_t size, i;
-    char *string;
 
-    printf("[.] bytes object info\n");
+def arg_calc(argv):
+    n = len(argv) - 1
+    if n != 3:
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
+    a = int(argv[1])
+    op = argv[2]
+    b = int(argv[3])
+    if op == '+':
+        print("{:d} {:s} {:d} = {:d}".format(a, op, b, add(a, b)))
+    elif op == '-':
+        print("{:d} {:s} {:d} = {:d}".format(a, op, b, sub(a, b)))
+    elif op == '*':
+        print("{:d} {:s} {:d} = {:d}".format(a, op, b, mul(a, b)))
+    elif op == '/':
+        print("{:d} {:s} {:d} = {:d}".format(a, op, b, div(a, b)))
+    else:
+        print("Unknown operator. Available operators: +, -, * and /")
+        exit(1)
 
-    if (!PyBytes_Check(bytes))
-    {
-        printf("  [ERROR] Invalid Bytes Object\n");
-        return;
-    }
 
-    size = PyBytes_Size(bytes);
-    string = PyBytes_AsString(bytes);
-
-    printf("  size: %ld\n", size);
-    printf("  trying string: %s\n", string);
-    printf("  first %ld bytes:", size < 10 ? size + 1 : 10);
-    for (i = 0; i < size && i < 10; i++)
-        printf(" %02x", string[i] & 0xff);
-    printf("\n");
-}
-
-void print_python_list(PyObject *p)
-{
-    PyListObject *list = (PyListObject *)p;
-    PyObject *item;
-    Py_ssize_t size, i;
-    const char *type;
-
-    printf("[*] Python list info\n");
-
-    if (!PyList_Check(list))
-    {
-        printf("  [ERROR] Invalid List Object\n");
-        return;
-    }
-
-    size = PyList_Size(list);
-
-    printf("[*] Size of the Python List = %ld\n", size);
-    printf("[*] Allocated = %ld\n", ((PyListObject *)list)->allocated);
-
-    for (i = 0; i < size; i++)
-    {
-        item = PyList_GetItem(list, i);
-        type = Py_TYPE(item)->tp_name;
-
-        printf("Element %ld: %s\n", i, type);
-        if (!strcmp(type, "bytes"))
-            print_python_bytes(item);
-    }
-}
-
+if __name__ == "__main__":
+    import sys
+    arg_calc(sys.argv)
