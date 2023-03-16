@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def update_dictionary(a_dictionary, key, value):
     """
     Adds or updates a key-value pair in a dictionary.
@@ -14,9 +13,3 @@ def update_dictionary(a_dictionary, key, value):
     """
     a_dictionary[key] = value
     return a_dictionary
-
-
-my_dict = {'c': 3, 'a': 1, 'b': 2}
-sorted_dict = dict(sorted(my_dict.items()))
-print(sorted_dict)  # prints a dict in sorted order of keys
-
