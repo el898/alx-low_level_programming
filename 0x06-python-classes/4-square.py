@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
-"""Define a Square"""
+"""Define a Square."""
 
 
 class Square:
-    """for the square"""
+    """for the square."""
 
     def __init__(self, size=0):
         """
@@ -14,7 +14,7 @@ class Square:
             size (int): The Default size is 0.
 
         """
-        self.__size = size
+        self.size = size
 
     @property
         def size(self):
