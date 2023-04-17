@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-i
+
 """Define a Square"""
 
 
