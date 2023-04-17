@@ -9,7 +9,6 @@ class Square:
     def __init__(self, size=0):
         """
         Initialize a Square instance.
-
         Args:
             size (int): The Default size is 0.
 
