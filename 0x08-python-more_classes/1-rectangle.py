@@ -30,8 +30,8 @@ class Rectangle:
         self.__width = value
 
     @property
-    """Get/Set the height of the triangle"""
     def height(self):
+    """Get/Set the height of the triangle"""
         return self.__height
 
     @height.setter
